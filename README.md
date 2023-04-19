@@ -28,4 +28,6 @@ Player musicale, possibilmente visibile solo se c'è una canzone in riproduzione
 
 - impostare redux per tutte le funzioni (pulsanti player)
 
--
+- implementare tutte le funzionalità dei tasti
+
+- rendere user disponibile globalmente con redux
