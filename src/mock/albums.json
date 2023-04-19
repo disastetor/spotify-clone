@@ -1,0 +1,74 @@
+[
+  {
+    "id": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "name": "Mainstream Sellout",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png",
+    "artistId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d"
+  },
+  {
+    "id": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "name": "Tickets to My Downfall",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png",
+    "artistId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d"
+  },
+  {
+    "id": "22e5e59d-d077-4c2c-9a8c-ff2cb728f118",
+    "name": "Music to Be Murdered By",
+    "cover": "https://media.pitchfork.com/photos/5e273d36d7f8cd0008150f58/1:1/w_600/eminem_music.jpg",
+    "artistId": "e868b0c9-ad4b-4322-b89f-45622bc86a75"
+  },
+  {
+    "id": "ab34e303-5779-4384-b367-c1f67d67fc24",
+    "name": "Kamikaze",
+    "cover": "https://m.media-amazon.com/images/I/91AMfe72gCL._AC_SL1500_.jpg",
+    "artistId": "e868b0c9-ad4b-4322-b89f-45622bc86a75"
+  },
+  {
+    "id": "c1901e57-378c-4c0c-b81b-8febcb3d43e4",
+    "name": "Twelve Carat Toothache",
+    "cover": "https://www.newsic.it/wp-content/uploads/2022/06/Post-Malone-Butterfly-Knife-NO-FADE-album-2022-786x786.jpg",
+    "artistId": "8e2818dc-a921-477f-84c8-150538b9f426"
+  },
+  {
+    "id": "5b02dc48-3d72-444b-bef2-e9e9b356a06c",
+    "name": "Hollywood's Bleeding",
+    "cover": "https://media.pitchfork.com/photos/629a1d0bec6d212a5b6b705e/1:1/w_600/Post-Malone-Hollywoods-Bleeding.jpg",
+    "artistId": "8e2818dc-a921-477f-84c8-150538b9f426"
+  },
+  {
+    "id": "9c14d397-41f3-48d6-a0ad-5e0251b8b93c",
+    "name": "Love Sux",
+    "cover": "https://assets.vogue.com/photos/62165910f5a6c95e81764b7e/master/w_2560%2Cc_limit/Avril%2520Lavigne%2520Main%2520PR%2520Image.jpg",
+    "artistId": "a7a56072-b212-42c3-a1d5-92b1a309604b"
+  },
+  {
+    "id": "273768d9-2060-426f-9c35-50e61ef6d180",
+    "name": "Under My Skin",
+    "cover": "https://images.genius.com/9f6646385ee7aa36b60a987ed81d46f3.1000x1000x1.jpg",
+    "artistId": "a7a56072-b212-42c3-a1d5-92b1a309604b"
+  },
+  {
+    "id": "0bf19cf9-37ed-459b-8bfa-3ec503a2eb42",
+    "name": "American Idiot",
+    "cover": "https://i.scdn.co/image/ab67616d0000b2731d13a9948aab982fabdf5209",
+    "artistId": "2a9dd0ee-d813-49c9-b799-48c74a44e7a0"
+  },
+  {
+    "id": "cf851ef6-e537-4850-a69f-e1c7851fe173",
+    "name": "21st Century Breakdown",
+    "cover": "https://i.scdn.co/image/ab67616d0000b273c2ced39899b0d67cd5a724fa",
+    "artistId": "2a9dd0ee-d813-49c9-b799-48c74a44e7a0"
+  },
+  {
+    "id": "8f794e57-e5c6-410b-ba0b-855c8a80b253",
+    "name": "Meet The Woo 2",
+    "cover": "https://a6p8a2b3.stackpathcdn.com/sFR5b-DlhIhJwvvJ5i4u3h-Nvbk=/1200x1200/smart/rockol-img/img/foto/upload/meet-the-woo-2-pop-smoke-cover-ts1582211397.jpeg",
+    "artistId": "dff44134-1e57-44d7-9328-1d1a4878c169"
+  },
+  {
+    "id": "7c27799c-986d-4f45-86b8-71133c6653d0",
+    "name": "Meet The Woo",
+    "cover": "https://m.media-amazon.com/images/I/71nR5TyFmAL._AC_SY450_.jpg",
+    "artistId": "dff44134-1e57-44d7-9328-1d1a4878c169"
+  }
+]

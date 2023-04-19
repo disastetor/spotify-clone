@@ -1,0 +1,250 @@
+[
+  {
+    "id": "09af7932-26a3-4165-a5b4-fcbeef1f8b19",
+    "name": "Born with Horns",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "923c6bb2-ddd6-4055-869e-06badca3342e",
+    "name": "God Save Me",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "e804b1ba-31d4-41c1-b77c-05e640e9c9fb",
+    "name": "Maybe (feat. Bring Me the Horizon)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "998ec59b-b627-40ad-98ea-34f271155cf6",
+    "name": "Drug Dealer (feat. Lil Wayne)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "6d2b007a-77d3-4f9a-81b6-9216b5c0db35",
+    "name": "Wall of Fame (Interlude)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "523c2e5b-338c-478c-a95d-ef9fd5fa03f7",
+    "name": "Mainstream Sellout",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "b3e61d68-f5f9-4989-a24d-420513d24db7",
+    "name": "Make Up Sex (feat. blackbear)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "39e372a7-bf44-416f-b191-8bd20ae8f6bd",
+    "name": "Emo Girl (feat. Willow)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "af5b588d-b468-4776-80ec-6fc326c45d43",
+    "name": "5150",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "4894cce7-1ac3-4e5f-b814-f71dc5aac91d",
+    "name": "Papercuts (album edit)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "ef6c1565-c440-4bfa-9d42-0c06e1f094cc",
+    "name": "WW4",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "abf28ca5-d814-4b58-8ed4-a858010464b3",
+    "name": "Ay! (feat. Lil Wayne)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "63567c74-7bd5-43da-8e00-9d17c66c623a",
+    "name": "Fake Love Don't Last (feat. Iann Dior)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "44d34973-a845-4b2b-baa7-5c36e5301cd5",
+    "name": "Die in California (feat. Gunna, Young Thug e Landon Barker)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "8e2e6d1f-8ff5-4e1b-befb-ecda50d6fb04",
+    "name": "Sid & Nancy",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "369cfa70-974a-4e06-be64-23c9623cc2e6",
+    "name": "Twin Flame",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "ca3c1bc2-fac8-4f7a-b5f5-79c649df25fc",
+    "name": "9 Lives",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "09af7932-26a3-4165-a5b4-fcbeef1f8b19",
+    "name": "More than Life (feat. Glaive)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "09af7932-26a3-4165-a5b4-fcbeef1f8b19",
+    "name": "Last November",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "9977d566-c5ad-4bf4-88e8-e6b78b141471",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Machine_Gun_Kelly_-_Mainstream_Sellout.png/220px-Machine_Gun_Kelly_-_Mainstream_Sellout.png"
+  },
+  {
+    "id": "7ee5277f-e17e-4d87-a648-6cc57d731ffb",
+    "name": "Title Track",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "7008cc88-89f4-469f-bbea-7e96f7be14fc",
+    "name": "Kiss Kiss",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "07355245-384f-488a-9d22-e27e19d2c970",
+    "name": "Drunk Face",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "c65daca4-3952-4bd7-a397-95afc1f18209",
+    "name": "Bloody Valentine",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "0a8f86d1-9ed2-4dee-ae1d-ae676e825509",
+    "name": "Forget Me Too (featuring Halsey)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "a81728b9-d3f4-4223-a610-f43eea58aefb",
+    "name": "All I Know (featuring Trippie Redd)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "02e37b4c-c9dc-4fa0-b2ab-eab739644243",
+    "name": "Lonely",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "3de19b7a-a284-4778-854f-f098091e51a9",
+    "name": "WWIII",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "ebd86ee8-61a4-48e3-a50f-2c6bbb00b56f",
+    "name": "Concert for Aliens",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "e0576a3c-4f97-4b55-80a2-c92fad4bf9a9",
+    "name": "My Ex's Best Friend (featuring Blackbear)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "be69fd00-afd3-490d-aa65-09c177d457b4",
+    "name": "Jawbreaker",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  },
+  {
+    "id": "862ad884-d834-4341-b545-2a1a50232e37",
+    "name": "Nothing Inside (featuring Iann Dior)",
+    "authorName": "Machine Gun Kelly",
+    "authorId": "a792f114-7cad-40aa-80f4-b6e4e1fc076d",
+    "albumId": "2d51a260-14aa-489c-bca2-2a126275979e",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png/220px-Machine_Gun_Kelly_-_Tickets_to_My_Downfall.png"
+  }
+]
