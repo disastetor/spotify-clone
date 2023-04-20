@@ -1,7 +1,5 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
-import fetchData from './test';
+import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import Modal from './components/Modal';
 
@@ -18,10 +16,6 @@ import './App.css';
 
 function App() {
   const { isOpen } = useSelector((store) => store.modal);
-
-  /*   useEffect(() => {
-    fetchData();
-  }, []); */
 
   return (
     <div className="App">

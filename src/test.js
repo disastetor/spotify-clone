@@ -1,14 +1,9 @@
-/* import axios from 'axios';
+import axios from 'axios';
 
-const fetchData = async (email, password) => {
-  console.log('email ' + email);
-  console.log('password ' + password);
+const fetchData = async () => {
   try {
     axios
-      .post('/login', {
-        email: 'john.doe@test.com',
-        password: 'Test123456!!',
-      })
+      .get('/songs')
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   } catch (error) {
@@ -16,4 +11,4 @@ const fetchData = async (email, password) => {
   }
 };
 
-export default fetchData; */
+export default fetchData;
