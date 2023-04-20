@@ -1,5 +1,9 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import fetchData from './test';
+import { useEffect, useState } from 'react';
+import Modal from './components/Modal';
 
 //Pages & components
 import Home from './pages/Home/Home';
@@ -13,9 +17,16 @@ import Player from './components/Player';
 import './App.css';
 
 function App() {
+  const { isOpen } = useSelector((store) => store.modal);
+
+  /*   useEffect(() => {
+    fetchData();
+  }, []); */
+
   return (
     <div className="App">
       <BrowserRouter>
+        {isOpen && <Modal />}
         <div className="sidebar">
           <Sidebar />
         </div>

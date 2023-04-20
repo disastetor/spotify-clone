@@ -1,4 +1,7 @@
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { openModal } from '../features/modal/modalSlice';
 
 //Style
 import './Sidebar.css';
@@ -9,6 +12,7 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   return (
     <>
       <div className="sidebar-content">
@@ -16,7 +20,7 @@ const Sidebar = () => {
                     PROFILE 
              ======================*/}
         <div className="profile">
-          <div className="propic">
+          <div className=" propic" onClick={() => dispatch(openModal())}>
             <div className="image">
               <Person2Icon />
             </div>

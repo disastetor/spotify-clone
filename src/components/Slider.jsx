@@ -12,7 +12,9 @@ export default function ColorSlider() {
       <Slider
         size="small"
         aria-label="Temperature"
-        defaultValue={30}
+        defaultValue={0}
+        min={0}
+        max={180}
         getAriaValueText={valuetext}
         color="secondary"
       />
