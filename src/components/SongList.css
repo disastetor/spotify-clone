@@ -1,0 +1,22 @@
+.songs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5% 2%;
+  grid-auto-rows: minmax(100px, auto);
+  box-sizing: border-box;
+  padding: 3% 3%;
+}
+
+@media (max-width: 1550px) {
+  .songs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .songs {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+    padding: 5%;
+  }
+}

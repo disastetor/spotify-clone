@@ -1,14 +1,19 @@
+import SongList from '../../components/SongList';
 import useFetchSongs from '../../hooks/useFetchSongs';
+import './Home.css';
 
 const Home = () => {
   const { data, loading } = useFetchSongs();
 
-  console.log(data, loading);
   return (
     <>
-      <h1>Home</h1>
-      <div className="song-container"></div>
+      <div className="song-container">
+        <h1 className="title home-title">Home</h1>
+
+        {!loading && <SongList songs={data.songs} />}
+      </div>
     </>
   );
 };
+
 export default Home;

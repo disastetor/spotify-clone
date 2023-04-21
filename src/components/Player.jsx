@@ -1,5 +1,7 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Slider from './Slider';
+import { useDispatch } from 'react-redux';
+import { test } from '../features/player/playerSlice';
 
 //Styles
 import './Player.css';
@@ -11,8 +13,20 @@ import {
   BackwardButton,
   ForwardButton,
   RepeatIcon,
+  FilledHeart,
 } from '../assets/icons';
+
 const Player = () => {
+  const [isFavourite, setIsFavourite] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const isliked = (e) => {
+    e.preventDefault();
+    setIsFavourite(!isFavourite);
+    dispatch(test());
+  };
+
   return (
     <div className="player-container">
       <div className="progress-bar">
@@ -27,8 +41,8 @@ const Player = () => {
         {/*======================
                   LIKE BUTTON 
              ======================*/}
-        <div className="lateral-mini-buttons">
-          <EmptyHeart />
+        <div onClick={(e) => isliked(e)} className="lateral-mini-buttons">
+          {isFavourite ? <FilledHeart /> : <EmptyHeart />}
         </div>
         {/*======================
                   SONG TITLE 
