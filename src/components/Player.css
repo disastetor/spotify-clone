@@ -92,11 +92,9 @@
   width: 30%;
   display: flex;
   flex-direction: row;
-  background-color: aqua;
 }
 
 .svg-container {
-  background-color: burlywood;
   width: 20%;
   cursor: pointer;
   top: auto;

@@ -1,15 +1,16 @@
 import { useSelector } from 'react-redux';
+import FavoriteList from './FavoriteList';
 
 const Favorite = () => {
   const { favoriteSongs } = useSelector((state) => state.favorite);
-  console.log(favoriteSongs);
+
   return (
     <div>
       <h1>Favorite</h1>
       {favoriteSongs.length < 1 ? (
-        <p>There are no favorite songs :/</p>
+        <p>There are no favorite songs yet :/</p>
       ) : (
-        <p>canzoniii</p>
+        <FavoriteList favorite={favoriteSongs} />
       )}
     </div>
   );
