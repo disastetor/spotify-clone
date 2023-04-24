@@ -3,13 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import AlbumList from './AlbumList';
 
+//Style
+import '../Home/Home.css';
+
 const Album = () => {
   const dispatch = useDispatch();
   const albums = useSelector((state) => state.album);
 
   useEffect(() => {
     dispatch(fetchAlbum());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -22,9 +25,9 @@ const Album = () => {
       {!albums.loading && albums?.albums?.albums?.length ? (
         <>
           <div className="song-container">
-            <h1 className="title home-title">Home</h1>
+            <h1 className="title home-title">Albums</h1>
 
-            {<AlbumList albums={albums} />}
+            {<AlbumList albums={albums.albums} />}
           </div>
         </>
       ) : null}

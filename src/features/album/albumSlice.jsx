@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
-const url = '/albums';
 const initialState = {
   loading: false,
   albums: [],
