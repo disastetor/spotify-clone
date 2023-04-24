@@ -40,7 +40,6 @@ const playerSlice = createSlice({
       state.shuffleActive
         ? (state.index = Math.floor(Math.random() * (payload.songs.length - 1)))
         : (state.index += 1);
-      console.log(state.index);
       //Check if there is a song next to the current, if not restart from the first song
       if (state.index < payload.songs.length) {
         //find and store the song with the relative index

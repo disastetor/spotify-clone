@@ -18,7 +18,9 @@ const favoriteSlice = createSlice({
         }
       });
       if (found) {
-        console.log('already included');
+        state.favoriteSongs = state.favoriteSongs.filter((song) => {
+          return song.id !== payload.id;
+        });
       } else {
         state.favoriteSongs.push(payload);
       }
