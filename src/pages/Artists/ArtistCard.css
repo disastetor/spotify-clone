@@ -1,0 +1,12 @@
+.card {
+  box-shadow: none;
+}
+
+.card:hover {
+  box-shadow: none;
+  transform: scale(1.03);
+}
+
+.card-image-album {
+  border-radius: 50%;
+}

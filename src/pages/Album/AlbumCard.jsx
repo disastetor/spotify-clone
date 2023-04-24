@@ -2,7 +2,7 @@
 import './AlbumCard.css';
 
 const AlbumCard = ({ album }) => {
-  const { id, name, cover, artistId } = album;
+  const { id, name, cover } = album;
   return (
     <>
       <div key={id} className="card">
