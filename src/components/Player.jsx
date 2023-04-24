@@ -1,30 +1,47 @@
-import { useState } from 'react';
 import Slider from './Slider';
-import { useDispatch } from 'react-redux';
-import { test } from '../features/player/playerSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  nextSong,
+  previousSong,
+  shuffle,
+} from '../features/player/playerSlice';
+import { setFavorite } from '../features/favorite/favoriteSlice';
 
 //Styles
 import './Player.css';
 import {
   EmptyHeart,
-  VolumeActive,
+  /* VolumeActive,
   ShuffleIcon,
   PlayButton,
   BackwardButton,
   ForwardButton,
-  RepeatIcon,
+  RepeatIcon, */
   FilledHeart,
 } from '../assets/icons';
+import VolumeSlider from './VolumeSlider';
 
 const Player = () => {
-  const [isFavourite, setIsFavourite] = useState(false);
+  /* Player values */
+  const { currentSong, currentSongId, songs, shuffleActive } = useSelector(
+    (state) => state.player
+  );
+
+  /* Favorite values */
+  const { favoriteSongs } = useSelector((state) => state.favorite);
 
   const dispatch = useDispatch();
 
-  const isliked = (e) => {
-    e.preventDefault();
-    setIsFavourite(!isFavourite);
-    dispatch(test());
+  //Check if the current playing song is contained in the favorite list
+  const isFavorite = favoriteSongs.find((song) => {
+    if (song.id === currentSongId) {
+      return true;
+    } else return false;
+  });
+
+  const handleLike = () => {
+    const found = songs.songs.find((song) => song.id === currentSongId);
+    dispatch(setFavorite(found));
   };
 
   return (
@@ -41,22 +58,38 @@ const Player = () => {
         {/*======================
                   LIKE BUTTON 
              ======================*/}
-        <div onClick={(e) => isliked(e)} className="lateral-mini-buttons">
-          {isFavourite ? <FilledHeart /> : <EmptyHeart />}
+        <div
+          onClick={() => handleLike()}
+          className="lateral-mini-button-hearth"
+          id="heart"
+        >
+          {isFavorite ? <FilledHeart /> : <EmptyHeart />}
         </div>
         {/*======================
                   SONG TITLE 
              ======================*/}
-        <div className="song-title">can't hold us now</div>
+        <div className="song-title">{currentSong}</div>
         {/*======================
                   AUDIO CONTROLS 
              ======================*/}
         <div className="control-panel">
-          <ShuffleIcon />
-          <BackwardButton />
-          <PlayButton />
-          <ForwardButton />
-          <RepeatIcon />
+          <div className="svg-container" onClick={() => dispatch(shuffle())}>
+            {shuffleActive ? <div>ON</div> : <div>OFF</div>}
+          </div>
+          <div
+            className="svg-container"
+            onClick={() => dispatch(previousSong(songs))}
+          >
+            BW
+          </div>
+          <div className="svg-container">P</div>
+          <div
+            className="svg-container"
+            onClick={() => dispatch(nextSong(songs))}
+          >
+            FW
+          </div>
+          <div className="svg-container">REP</div>
         </div>
         {/*======================
                   AUTHOR/ALBUM 
@@ -65,8 +98,8 @@ const Player = () => {
         {/*======================
                   VOLUME BUTTON 
              ======================*/}
-        <div className=" lateral-mini-buttons">
-          <VolumeActive />
+        <div className=" lateral-mini-buttons" id="volume">
+          <VolumeSlider />
         </div>{' '}
       </div>
     </div>

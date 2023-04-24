@@ -5,12 +5,15 @@ import './SongList.css';
 
 const SongList = (props) => {
   const { songs } = props;
+
   return (
     <>
       <div className="songs">
-        {songs.map((song, index) => (
-          <SongCard song={song} index={index} />
-        ))}
+        <>
+          {songs.songs.map((song, index) => (
+            <SongCard key={song.id} song={song} index={index} />
+          ))}
+        </>
       </div>
     </>
   );
