@@ -19,13 +19,9 @@ const SongCard = ({ song, index }) => {
         key={id}
         className="card"
       >
-        <div className="image-container">
-          <img src={cover} alt="album cover" className="card-image"></img>
-        </div>
-        <div className="title-author-info">
-          <div className="card-title">{name}</div>
-          <div className="card-author">{authorName}</div>
-        </div>
+        <img src={cover} alt="album cover" className="card-image-album"></img>
+        <div className="card-author">{name}</div>
+        <div className="card-title">{authorName}</div>
       </div>
     </>
   );
