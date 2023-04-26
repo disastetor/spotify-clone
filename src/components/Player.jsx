@@ -11,15 +11,16 @@ import { setFavorite } from '../features/favorite/favoriteSlice';
 import './Player.css';
 import {
   EmptyHeart,
-  /* VolumeActive,
+  VolumeActive,
   ShuffleIcon,
   PlayButton,
   BackwardButton,
   ForwardButton,
-  RepeatIcon, */
+  RepeatIcon,
   FilledHeart,
 } from '../assets/icons';
 import VolumeSlider from './VolumeSlider';
+import { useEffect, useState } from 'react';
 
 const Player = () => {
   /* Player values */
@@ -68,38 +69,69 @@ const Player = () => {
         {/*======================
                   SONG TITLE 
              ======================*/}
-        <div className="song-title">{currentSong}</div>
+        <div className="song-title">
+          {currentSong ? (
+            currentSong
+          ) : (
+            <span>Seleziona una canzone da riprodurre</span>
+          )}
+        </div>
         {/*======================
                   AUDIO CONTROLS 
              ======================*/}
         <div className="control-panel">
-          <div className="svg-container" onClick={() => dispatch(shuffle())}>
-            {shuffleActive ? <div>ON</div> : <div>OFF</div>}
+          {/* SHUFFLE */}
+          <div
+            className={shuffleActive ? 'svg-container active' : 'svg-container'}
+            id="shuffle"
+            onClick={() => dispatch(shuffle())}
+          >
+            {shuffleActive ? (
+              <ShuffleIcon />
+            ) : (
+              <ShuffleIcon style={{ fill: 'green' }} />
+            )}
           </div>
+
+          {/* BACKWARD */}
           <div
             className="svg-container"
+            id="backward"
             onClick={() => dispatch(previousSong(songs))}
           >
-            BW
+            <BackwardButton />
           </div>
-          <div className="svg-container">P</div>
+
+          {/* PLAY/PAUSE */}
+          <div className="svg-container" id="play">
+            <PlayButton />
+          </div>
+
+          {/* FORWARD */}
           <div
             className="svg-container"
+            id="forward"
             onClick={() => dispatch(nextSong(songs))}
           >
-            FW
+            <ForwardButton />
           </div>
-          <div className="svg-container">REP</div>
+
+          {/* REPETE */}
+          <div className="svg-container" id="repete">
+            <RepeatIcon />
+          </div>
         </div>
         {/*======================
                   AUTHOR/ALBUM 
              ======================*/}
-        <div className="author-album">Ji ai Jo, Blockbuster</div>
+        <div className="author-album">Johnny Stecchino</div>
         {/*======================
                   VOLUME BUTTON 
              ======================*/}
         <div className=" lateral-mini-buttons" id="volume">
-          <VolumeSlider />
+          <div className="volume-container">
+            <VolumeSlider />
+          </div>
         </div>{' '}
       </div>
     </div>

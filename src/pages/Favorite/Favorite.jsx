@@ -6,7 +6,7 @@ const Favorite = () => {
 
   return (
     <div>
-      <h1>Favorite</h1>
+      <h1>Preferiti</h1>
       {favoriteSongs.length < 1 ? (
         <p>There are no favorite songs yet :/</p>
       ) : (

@@ -6,7 +6,11 @@ const ArtistCard = ({ artist }) => {
   return (
     <>
       <div key={id} className="card">
-        <img src={avatar} alt="album cover" className="card-image-album"></img>
+        <img
+          src={avatar}
+          alt="album cover"
+          className="card-image-album - artist"
+        ></img>
         <div className="card-title">{name}</div>
       </div>
     </>

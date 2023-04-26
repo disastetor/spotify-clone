@@ -24,7 +24,7 @@ const Artists = () => {
       {!artists.loading && artists?.artists?.artists?.length ? (
         <>
           <div className="song-container">
-            <h1 className="title home-title">Artists</h1>
+            <h1 className="title home-title">Artisti</h1>
 
             {<ArtistsList artists={artists.artists} />}
           </div>

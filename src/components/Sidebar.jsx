@@ -90,7 +90,7 @@ const Sidebar = () => {
               color: isActive ? 'plum' : 'aliceblue',
             })}
           >
-            <div className="text">Artist</div>
+            <div className="text">Artisti</div>
             <div className="icon">
               <Person2Icon fontSize="large" />
             </div>

@@ -1,7 +1,6 @@
 .player-container {
   width: 100%;
   height: 100%;
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +13,6 @@
   position: relative;
   height: 25%;
   width: 100%;
-  /* background-color: rgb(165, 220, 109); */
   margin-top: auto;
   display: flex;
   flex-direction: row;
@@ -44,35 +42,37 @@
 .player-secondary-container {
   width: 100%;
   height: 40%;
-  /* background-color: red; */
   margin: 0 auto auto auto;
   display: flex;
   flex-direction: row;
 }
 
 .lateral-mini-button-hearth {
-  width: 5%;
+  width: 15%;
   height: 40%;
   display: flex;
   margin: auto;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .lateral-mini-button-hearth svg {
   margin: 0 auto;
+}
+#heart:active {
+  transform: scale(1.3);
+  cursor: pointer;
 }
 
 #volume {
   width: 15%;
   height: 40%;
-  display: flex;
-  margin: 60 auto;
   transition: 0.2s;
-  left: 0;
+  display: flex;
+  margin: auto;
 }
 
-#heart:hover {
-  transform: scale(1.3);
-  cursor: pointer;
+.volume-container {
+  width: 100%;
+  margin: auto;
 }
 
 #volume svg:hover {
@@ -82,35 +82,68 @@
 
 .song-title {
   margin: auto;
-  width: 30%;
+  width: 15%;
   text-transform: capitalize;
 }
 
 .control-panel {
   position: relative;
-  margin: auto;
-  width: 30%;
+  width: 40%;
+  height: 100%;
   display: flex;
+  margin: auto;
   flex-direction: row;
 }
 
 .svg-container {
+  display: flex;
+  margin: auto;
   width: 20%;
   cursor: pointer;
   top: auto;
+  transition: 0.2s;
+  stroke: aliceblue;
+  fill: aliceblue;
+}
+
+.svg-container:active {
+  transform: scale(1.2);
+}
+
+#shuffle,
+#backward,
+#play,
+#forward,
+#repete {
+  height: 100%;
+}
+
+.svg-container.active {
+  stroke: plum;
+  fill: plum;
+}
+
+#shuffle svg,
+#backward svg,
+#play svg,
+#forward svg,
+#repete svg {
+  height: 50%;
+  width: 50%;
 }
 
 .author-album {
   margin: auto;
-  width: 20%;
+  width: 15%;
   text-transform: capitalize;
+  user-select: none;
 }
 
 /*========================= 
         MEDIA QUERIES
  ===========================*/
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .player-container {
     position: relative;
   }
