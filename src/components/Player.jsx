@@ -22,12 +22,16 @@ import {
   PauseIcon,
 } from '../assets/icons';
 import VolumeSlider from './VolumeSlider';
+import { useEffect, useState } from 'react';
 
 const Player = () => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
   /* Player values */
   const {
     currentSong,
     currentSongId,
+    currentSongAuthor,
     songs,
     shuffleActive,
     cover,
@@ -41,11 +45,22 @@ const Player = () => {
   const dispatch = useDispatch();
 
   //Check if the current playing song is contained in the favorite list
-  const isFavorite = favoriteSongs.find((song) => {
+  /*   const isFavorite = favoriteSongs.find((song) => {
     if (song.id === currentSongId) {
       return true;
     } else return false;
-  });
+  }); */
+  /*   useEffect(() => {
+    if (favoriteSongs.length > 0) {
+      setIsFavorite(
+        favoriteSongs.find((song) => {
+          if (song.id === currentSongId) {
+            return true;
+          } else return false;
+        })
+      );
+    }
+  }, [favoriteSongs, currentSong, currentSongId]); */
 
   const handleLike = () => {
     const found = songs.songs.find((song) => song.id === currentSongId);
@@ -125,7 +140,9 @@ const Player = () => {
           <div
             className="svg-container"
             id="forward"
-            onClick={() => dispatch(nextSong(songs))}
+            onClick={() => {
+              dispatch(nextSong(songs));
+            }}
           >
             <ForwardButton />
           </div>
@@ -142,7 +159,9 @@ const Player = () => {
         {/*======================
                   AUTHOR/ALBUM 
              ======================*/}
-        <div className="author-album">Johnny Stecchino</div>
+        <div className="author-album">
+          {currentSongAuthor ? currentSongAuthor : null}
+        </div>
         {/*======================
                   VOLUME BUTTON 
              ======================*/}

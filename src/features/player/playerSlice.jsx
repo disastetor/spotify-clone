@@ -57,10 +57,20 @@ const playerSlice = createSlice({
             return song.name;
           }
         });
+        state.currentSongId = nextSong[0].id;
         state.currentSong = nextSong[0].name;
+        state.currentSongAlbumId = nextSong[0].albumId;
+        state.currentSongAuthorId = nextSong[0].authorId;
+        state.currentSongAuthorName = nextSong[0].authorName;
+        state.cover = nextSong[0].cover;
       } else {
         state.index = 0;
-        state.currentSong = payload.songs[0].name;
+        state.currentSongId = nextSong[0].id;
+        state.currentSong = nextSong[0].name;
+        state.currentSongAlbumId = nextSong[0].albumId;
+        state.currentSongAuthorId = nextSong[0].authorId;
+        state.currentSongAuthorName = nextSong[0].authorName;
+        state.cover = nextSong[0].cover;
       }
     },
     //Same logic as the nextSong but if the user tries to further back than the first song
@@ -74,10 +84,20 @@ const playerSlice = createSlice({
             return song.name;
           }
         });
+        state.currentSongId = nextSong[0].id;
         state.currentSong = nextSong[0].name;
+        state.currentSongAlbumId = nextSong[0].albumId;
+        state.currentSongAuthorId = nextSong[0].authorId;
+        state.currentSongAuthorName = nextSong[0].authorName;
+        state.cover = nextSong[0].cover;
       } else {
         state.index = 0;
-        state.currentSong = payload.songs[0].name;
+        state.currentSongId = nextSong[0].id;
+        state.currentSong = nextSong[0].name;
+        state.currentSongAlbumId = nextSong[0].albumId;
+        state.currentSongAuthorId = nextSong[0].authorId;
+        state.currentSongAuthorName = nextSong[0].authorName;
+        state.cover = nextSong[0].cover;
       }
     },
     shuffle: (state) => {
