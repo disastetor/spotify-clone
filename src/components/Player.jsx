@@ -45,6 +45,7 @@ const Player = () => {
   const dispatch = useDispatch();
 
   //Check if the current playing song is contained in the favorite list
+  //tbh idkh but it works now (5 hrs ago didn't with the same code)
   const isFavorite = favoriteSongs.find((song) => {
     if (song.id === currentSongId) {
       return true;

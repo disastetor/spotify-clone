@@ -49,14 +49,17 @@ const playerSlice = createSlice({
         ? (state.index += 1)
         : (state.index += 0);
 
+      console.log(payload.songs);
+
       //Check if there is a song next to the current, if not restart from the first song
       if (state.index < payload.songs.length) {
         //find and store the song with the relative index
         const nextSong = payload.songs.filter((song, index) => {
           if (index === state.index) {
-            return song.name;
+            return song;
           }
         });
+        console.log(nextSong);
         state.currentSongId = nextSong[0].id;
         state.currentSong = nextSong[0].name;
         state.currentSongAlbumId = nextSong[0].albumId;
@@ -65,40 +68,33 @@ const playerSlice = createSlice({
         state.cover = nextSong[0].cover;
       } else {
         state.index = 0;
-        state.currentSongId = nextSong[0].id;
-        state.currentSong = nextSong[0].name;
-        state.currentSongAlbumId = nextSong[0].albumId;
-        state.currentSongAuthorId = nextSong[0].authorId;
-        state.currentSongAuthorName = nextSong[0].authorName;
-        state.cover = nextSong[0].cover;
+        state.currentSongId = payload.songs[0].id;
+        state.currentSong = payload.songs[0].name;
+        state.currentSongAlbumId = payload.songs[0].albumId;
+        state.currentSongAuthorId = payload.songs[0].authorId;
+        state.currentSongAuthorName = payload.songs[0].authorName;
+        state.cover = payload.songs[0].cover;
       }
     },
     //Same logic as the nextSong but if the user tries to further back than the first song
     //will be reproduced only the first song
     previousSong: (state, { payload }) => {
       state.isPlaying = true;
-      state.index -= 1;
       if (state.index >= 0) {
-        const nextSong = payload.songs.filter((song, index) => {
-          if (index === state.index) {
-            return song.name;
-          }
-        });
-        state.currentSongId = nextSong[0].id;
-        state.currentSong = nextSong[0].name;
-        state.currentSongAlbumId = nextSong[0].albumId;
-        state.currentSongAuthorId = nextSong[0].authorId;
-        state.currentSongAuthorName = nextSong[0].authorName;
-        state.cover = nextSong[0].cover;
-      } else {
-        state.index = 0;
-        state.currentSongId = nextSong[0].id;
-        state.currentSong = nextSong[0].name;
-        state.currentSongAlbumId = nextSong[0].albumId;
-        state.currentSongAuthorId = nextSong[0].authorId;
-        state.currentSongAuthorName = nextSong[0].authorName;
-        state.cover = nextSong[0].cover;
-      }
+        state.index -= 1;
+      } else state.index = 0;
+
+      const prevSong = payload.songs.filter((song, index) => {
+        if (index === state.index) {
+          return song.name;
+        }
+      });
+      state.currentSongId = prevSong[0].id;
+      state.currentSong = prevSong[0].name;
+      state.currentSongAlbumId = prevSong[0].albumId;
+      state.currentSongAuthorId = prevSong[0].authorId;
+      state.currentSongAuthorName = prevSong[0].authorName;
+      state.cover = prevSong[0].cover;
     },
     shuffle: (state) => {
       state.shuffleActive = !state.shuffleActive;
