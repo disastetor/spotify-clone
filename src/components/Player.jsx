@@ -4,6 +4,8 @@ import {
   nextSong,
   previousSong,
   shuffle,
+  repeat,
+  handleplay,
 } from '../features/player/playerSlice';
 import { setFavorite } from '../features/favorite/favoriteSlice';
 
@@ -11,22 +13,27 @@ import { setFavorite } from '../features/favorite/favoriteSlice';
 import './Player.css';
 import {
   EmptyHeart,
-  VolumeActive,
   ShuffleIcon,
   PlayButton,
   BackwardButton,
   ForwardButton,
   RepeatIcon,
   FilledHeart,
+  PauseIcon,
 } from '../assets/icons';
 import VolumeSlider from './VolumeSlider';
-import { useEffect, useState } from 'react';
 
 const Player = () => {
   /* Player values */
-  const { currentSong, currentSongId, songs, shuffleActive } = useSelector(
-    (state) => state.player
-  );
+  const {
+    currentSong,
+    currentSongId,
+    songs,
+    shuffleActive,
+    cover,
+    repeatActive,
+    isPlaying,
+  } = useSelector((state) => state.player);
 
   /* Favorite values */
   const { favoriteSongs } = useSelector((state) => state.favorite);
@@ -48,6 +55,9 @@ const Player = () => {
   return (
     <div className="player-container">
       <div className="progress-bar">
+        <div className="album-image">
+          {cover ? <img src={cover} alt="Album-cover" /> : null}
+        </div>
         <div className="slider">
           {/* #TODO PROGRESS BAR */}
           <span className="slider-span">00:00</span>
@@ -103,8 +113,12 @@ const Player = () => {
           </div>
 
           {/* PLAY/PAUSE */}
-          <div className="svg-container" id="play">
-            <PlayButton />
+          <div
+            className="svg-container"
+            id="play"
+            onClick={() => dispatch(handleplay())}
+          >
+            {isPlaying ? <PauseIcon /> : <PlayButton />}
           </div>
 
           {/* FORWARD */}
@@ -116,8 +130,12 @@ const Player = () => {
             <ForwardButton />
           </div>
 
-          {/* REPETE */}
-          <div className="svg-container" id="repete">
+          {/* REPEAT */}
+          <div
+            className={repeatActive ? 'svg-container active' : 'svg-container'}
+            id="repeat"
+            onClick={() => dispatch(repeat())}
+          >
             <RepeatIcon />
           </div>
         </div>

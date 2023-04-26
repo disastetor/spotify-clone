@@ -209,16 +209,29 @@ export const ShuffleIcon = () => {
 
 export const RepeatIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      id="loop"
-      stroke="currentColor"
-      fill="currentColor"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="loop">
       <path d="M16,12a1,1,0,0,1-.71-1.71L17.59,8,15.29,5.71a1,1,0,0,1,1.41-1.41l3,3a1,1,0,0,1,0,1.41l-3,3A1,1,0,0,1,16,12Z"></path>
       <path d="M5 12a1 1 0 0 1-1-1V10A3 3 0 0 1 7 7H19a1 1 0 0 1 0 2H7a1 1 0 0 0-1 1v1A1 1 0 0 1 5 12zM8 20a1 1 0 0 1-.71-.29l-3-3a1 1 0 0 1 0-1.41l3-3a1 1 0 0 1 1.41 1.41L6.41 16l2.29 2.29A1 1 0 0 1 8 20z"></path>
       <path d="M17,17H5a1,1,0,0,1,0-2H17a1,1,0,0,0,1-1V13a1,1,0,0,1,2,0v1A3,3,0,0,1,17,17Z"></path>
+    </svg>
+  );
+};
+
+export const PauseIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
     </svg>
   );
 };

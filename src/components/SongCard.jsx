@@ -9,7 +9,7 @@ const SongCard = ({ song, index }) => {
   const { id, name, authorId, albumId, cover, authorName } = song;
 
   const handleClick = (name, index) => {
-    dispatch(play({ name, index, id, authorId, albumId, authorName }));
+    dispatch(play({ name, index, id, authorId, albumId, authorName, cover }));
   };
 
   return (

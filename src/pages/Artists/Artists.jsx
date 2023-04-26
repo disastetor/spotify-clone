@@ -11,8 +11,6 @@ const Artists = () => {
     dispatch(fetchArtists());
   }, [dispatch]);
 
-  console.log(artists);
-
   return (
     <>
       {/* Display loading while data is loading */}

@@ -8,11 +8,13 @@ const initialState = {
   error: '',
   isPlaying: false,
   shuffleActive: false,
+  repeatActive: false,
   currentSong: '',
   currentSongId: '',
   currentSongAuthor: '',
   currentSongAuthorId: '',
   currentSongAlbumId: '',
+  cover: '',
   index: 0,
 };
 
@@ -25,7 +27,7 @@ const playerSlice = createSlice({
   initialState,
   reducers: {
     play: (state, { payload }) => {
-      const { name, index, id, authorId, albumId, authorName } = payload;
+      const { name, index, id, authorId, albumId, authorName, cover } = payload;
       state.isPlaying = true;
       state.currentSong = name;
       state.index = index;
@@ -33,13 +35,20 @@ const playerSlice = createSlice({
       state.currentSongAuthorId = authorId;
       state.currentSongAlbumId = albumId;
       state.currentSongAuthor = authorName;
+      state.cover = cover;
     },
     nextSong: (state, { payload }) => {
       state.isPlaying = true;
       //Increment index value (if shuffle button is active pick a random index)
-      state.shuffleActive
+      //But only if the repeat button is not active
+      state.shuffleActive && !state.repeatActive
         ? (state.index = Math.floor(Math.random() * (payload.songs.length - 1)))
-        : (state.index += 1);
+        : (state.index += 0);
+
+      !state.shuffleActive && !state.repeatActive
+        ? (state.index += 1)
+        : (state.index += 0);
+
       //Check if there is a song next to the current, if not restart from the first song
       if (state.index < payload.songs.length) {
         //find and store the song with the relative index
@@ -74,6 +83,14 @@ const playerSlice = createSlice({
     shuffle: (state) => {
       state.shuffleActive = !state.shuffleActive;
     },
+    repeat: (state) => {
+      state.repeatActive = !state.repeatActive;
+    },
+    handleplay: (state) => {
+      if (state.currentSong !== '') {
+        state.isPlaying = !state.isPlaying;
+      }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchSong.pending, (state) => {
@@ -92,6 +109,7 @@ const playerSlice = createSlice({
   },
 });
 
-export const { play, nextSong, previousSong, shuffle } = playerSlice.actions;
+export const { play, nextSong, previousSong, shuffle, repeat, handleplay } =
+  playerSlice.actions;
 
 export default playerSlice.reducer;

@@ -9,7 +9,6 @@ const favoriteSlice = createSlice({
   initialState,
   reducers: {
     setFavorite: (state, { payload }) => {
-      console.log(payload);
       const found = state.favoriteSongs.find((song) => {
         if (song.id === payload.id) {
           return true;

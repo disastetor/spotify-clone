@@ -19,6 +19,17 @@
   margin-bottom: 2%;
 }
 
+.album-image {
+  margin-left: 5%;
+  width: 3vw;
+  height: 3vw;
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%;
+}
+
 .slider {
   display: flex;
   margin: auto;
@@ -30,9 +41,9 @@
 }
 
 .slider-span {
+  position: relative;
   margin: auto 0;
   font-size: 0.8em;
-  position: relative;
 }
 
 /*====================
@@ -114,7 +125,7 @@
 #backward,
 #play,
 #forward,
-#repete {
+#repeat {
   height: 100%;
 }
 
@@ -127,7 +138,7 @@
 #backward svg,
 #play svg,
 #forward svg,
-#repete svg {
+#repeat svg {
   height: 50%;
   width: 50%;
 }
@@ -176,5 +187,11 @@
   .control-panel svg {
     width: 10%;
     margin: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .album-image {
+    display: none;
   }
 }
