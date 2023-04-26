@@ -25,7 +25,7 @@ import VolumeSlider from './VolumeSlider';
 import { useEffect, useState } from 'react';
 
 const Player = () => {
-  const [isFavorite, setIsFavorite] = useState(false);
+  //const [isFavorite, setIsFavorite] = useState(false);
 
   /* Player values */
   const {
@@ -45,11 +45,11 @@ const Player = () => {
   const dispatch = useDispatch();
 
   //Check if the current playing song is contained in the favorite list
-  /*   const isFavorite = favoriteSongs.find((song) => {
+  const isFavorite = favoriteSongs.find((song) => {
     if (song.id === currentSongId) {
       return true;
     } else return false;
-  }); */
+  });
   /*   useEffect(() => {
     if (favoriteSongs.length > 0) {
       setIsFavorite(
