@@ -8,9 +8,16 @@ body,
   font-family: 'Neucha', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 800px) {
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
 }

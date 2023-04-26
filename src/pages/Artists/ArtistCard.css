@@ -1,12 +1,22 @@
-.card {
-  box-shadow: none;
-}
-
-.card:hover {
+.artist-card:hover {
   box-shadow: none;
   transform: scale(1.03);
 }
 
-.artist {
+.card-image-artist {
+  width: 15vw;
+  height: 15vw;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 3%;
   border-radius: 50%;
+}
+
+.artist-card {
+  position: relative;
+  height: 300px;
+  border-radius: 10px;
+  transition: 0.2s;
 }

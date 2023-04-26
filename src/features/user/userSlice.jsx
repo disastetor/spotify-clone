@@ -12,13 +12,17 @@ const initialState = {
   msg: '',
 };
 
-export const loginUser = createAsyncThunk('loginuser', async (body) => {
-  const res = await axios.post('/login', {
-    email: 'john.doe@test.com',
-    password: 'Test123456!!',
-  });
-  return await res;
-});
+export const loginUser = createAsyncThunk(
+  'loginUser',
+  async (email, password) => {
+    const res = await axios.post('/login', {
+      email: email,
+      password: password,
+    });
+    console.log(res);
+    return await res;
+  }
+);
 
 const userSlice = createSlice({
   name: 'user',

@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchSong());
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

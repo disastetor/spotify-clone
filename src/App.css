@@ -52,7 +52,7 @@
 
 /* Change color on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: magenta;
+  background: rgb(196, 28, 196);
 }
 
 h1 {

@@ -2,6 +2,8 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import Modal from './components/Modal';
+import ArtistsList from './pages/Artists/ArtistsList';
+import ArtistPage from './pages/Artists/ArtistPage';
 
 //Pages & components
 import Home from './pages/Home/Home';
@@ -30,7 +32,10 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route path="/favorite" element={<Favorite />} />
               <Route path="/album" element={<Album />} />
-              <Route path="/artists" element={<Artists />} />
+              <Route path="/artists" element={<Artists />}>
+                <Route index element={<ArtistsList />} />
+                <Route path=":artistId" element={<ArtistPage />} />
+              </Route>
             </Routes>
           </div>
           <footer className="player">
