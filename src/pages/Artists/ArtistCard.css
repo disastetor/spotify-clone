@@ -3,6 +3,13 @@
   transform: scale(1.03);
 }
 
+.artist-card {
+  height: 300px;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+}
 .card-image-artist {
   width: 15vw;
   height: 15vw;
@@ -12,11 +19,5 @@
   box-sizing: border-box;
   padding: 3%;
   border-radius: 50%;
-}
-
-.artist-card {
-  position: relative;
-  height: 300px;
-  border-radius: 10px;
-  transition: 0.2s;
+  left: 0;
 }

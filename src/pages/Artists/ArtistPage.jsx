@@ -3,9 +3,6 @@ import { useOutletContext } from 'react-router-dom';
 import SongCard from '../../components/SongCard';
 import AlbumCard from '../Album/AlbumCard';
 
-//Style
-import './ArtistPage.css';
-
 const ArtistPage = () => {
   const { artists, songs, albums } = useOutletContext();
 
@@ -35,14 +32,14 @@ const ArtistPage = () => {
         <h1>{artistData.name}</h1>
       </div>
 
-      <h3>Canzoni</h3>
+      <h3 style={{ textAlign: 'left' }}>Canzoni</h3>
       <div className="songs">
         {artistSongs.slice(0, 8).map((song, index) => (
           <SongCard key={song.id} song={song} index={index} />
         ))}
       </div>
 
-      <h3>Album</h3>
+      <h3 style={{ textAlign: 'left' }}>Album</h3>
       <div className="songs">
         {artistAlbum.map((album) => (
           <AlbumCard key={album.id} album={album} />

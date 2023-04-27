@@ -24,9 +24,10 @@ const favoriteSlice = createSlice({
         state.favoriteSongs.push(payload);
       }
     },
+    reset: () => initialState,
   },
 });
 
-export const { setFavorite } = favoriteSlice.actions;
+export const { setFavorite, reset } = favoriteSlice.actions;
 
 export default favoriteSlice.reducer;

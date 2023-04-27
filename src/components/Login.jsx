@@ -1,23 +1,19 @@
 import { closeModal } from '../features/modal/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { login, loginUser, fetchUsers } from '../features/user/userSlice';
+import { loginUser, fetchUsers } from '../features/user/userSlice';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isError, setIsError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
-  const { firstName, lastName, auth, loadingLogin, found, error } = useSelector(
-    (state) => state.user
-  );
+  const { auth, error, email: userMail } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchUsers());
-  }, []);
+  }, [dispatch]);
 
   const handleSubmit = async (e) => {
     if (email === 'easteregg@gmail.com' && password === '12345') {
@@ -35,9 +31,10 @@ const Login = () => {
   };
   return (
     <>
-      {success ? (
+      {auth ? (
         <section>
           <h1>Sei loggato!</h1>
+          <h3 style={{ textAlign: 'center' }}>{userMail}</h3>
           <br />
           <button
             className="btn clear-btn"
@@ -52,6 +49,7 @@ const Login = () => {
         </section>
       ) : (
         <>
+          <h4 className="title">Login</h4>
           <form onSubmit={handleSubmit} className="form">
             <div className="input-container">
               <label className="label">Email:</label>
@@ -89,7 +87,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          {isError && <p>{error}</p>}
+          {error && <p>{error}</p>}
         </>
       )}
     </>

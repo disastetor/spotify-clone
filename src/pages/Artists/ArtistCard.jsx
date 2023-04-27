@@ -14,7 +14,8 @@ const ArtistCard = ({ artist }) => {
             alt="album cover"
             className="card-image-artist"
           ></img>
-          <div className="card-title">{name}</div>
+
+          <div className="artist-title">{name}</div>
         </div>
       </NavLink>
     </>

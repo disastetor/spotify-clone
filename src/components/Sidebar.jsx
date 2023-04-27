@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { openModal } from '../features/modal/modalSlice';
+import { logout, clearLocalStorage } from '../features/user/userSlice';
 
 //Style
 import './Sidebar.css';
-import { FilledHeart, LogoutIcon } from '../assets/icons';
+import { FilledHeart } from '../assets/icons';
 import AlbumIcon from '@mui/icons-material/Album';
 import Person2Icon from '@mui/icons-material/Person2';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -13,6 +13,8 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 
 const Sidebar = () => {
   const dispatch = useDispatch();
+  const { auth, firstName, lastName } = useSelector((state) => state.user);
+
   return (
     <>
       <div className="sidebar-content">
@@ -25,13 +27,13 @@ const Sidebar = () => {
               <Person2Icon />
             </div>
           </div>
-          <div className="username">Username</div>
+          <div className="username">{auth && firstName + ' ' + lastName}</div>
         </div>
 
         {/*======================
                 PAGE LINKS 
              ======================*/}
-        <div className="pages">
+        <div className={'pages'}>
           {/*======================
                     HOME 
              ======================*/}
@@ -98,10 +100,19 @@ const Sidebar = () => {
         </div>
 
         {/* LOGOUT */}
-        <div className="logout-div">
-          <div className="logout">Logout</div>
-          <div className="logout-icon">
-            <LogoutRoundedIcon />
+
+        <div
+          className="logout-div"
+          onClick={() => {
+            dispatch(logout());
+            dispatch(clearLocalStorage());
+          }}
+        >
+          <div className="logout-minidiv">
+            <div className="logout">Logout</div>
+            <div className="logout-icon">
+              <LogoutRoundedIcon />
+            </div>
           </div>
         </div>
       </div>

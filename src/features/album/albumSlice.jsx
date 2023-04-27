@@ -15,9 +15,7 @@ const albumSlice = createSlice({
   name: 'album',
   initialState,
   reducers: {
-    test: (state) => {
-      console.log('hello');
-    },
+    reset: () => initialState,
   },
   extraReducers: (builder) => {
     builder.addCase(fetchAlbum.pending, (state) => {
@@ -36,6 +34,6 @@ const albumSlice = createSlice({
   },
 });
 
-export const { test } = albumSlice.actions;
+export const { reset } = albumSlice.actions;
 
 export default albumSlice.reducer;

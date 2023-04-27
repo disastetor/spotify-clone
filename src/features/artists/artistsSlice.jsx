@@ -15,9 +15,7 @@ const artistSlice = createSlice({
   name: 'artists',
   initialState,
   reducers: {
-    test: (state) => {
-      console.log('hello');
-    },
+    reset: () => initialState,
   },
   extraReducers: (builder) => {
     builder.addCase(fetchArtists.pending, (state) => {
@@ -36,6 +34,6 @@ const artistSlice = createSlice({
   },
 });
 
-export const { test } = artistSlice.actions;
+export const { reset } = artistSlice.actions;
 
 export default artistSlice.reducer;

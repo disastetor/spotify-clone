@@ -107,6 +107,7 @@ const playerSlice = createSlice({
         state.isPlaying = !state.isPlaying;
       }
     },
+    reset: () => initialState,
   },
   extraReducers: (builder) => {
     builder.addCase(fetchSong.pending, (state) => {
@@ -125,7 +126,14 @@ const playerSlice = createSlice({
   },
 });
 
-export const { play, nextSong, previousSong, shuffle, repeat, handleplay } =
-  playerSlice.actions;
+export const {
+  play,
+  nextSong,
+  previousSong,
+  shuffle,
+  repeat,
+  handleplay,
+  reset,
+} = playerSlice.actions;
 
 export default playerSlice.reducer;

@@ -41,8 +41,8 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    logout: (state, action) => {
-      state = initialState;
+    logout: () => initialState,
+    clearLocalStorage: () => {
       localStorage.clear();
     },
   },
@@ -53,16 +53,23 @@ const userSlice = createSlice({
     });
     //Case when data are successfully fetched
     builder.addCase(loginUser.fulfilled, (state, action) => {
+      console.log(action);
       //Check if the used mail is equal to a user mail
       //Here there is only one object, with an object array there would be a .find method to check the mail
-      if (state.users.email === action.meta.arg.email) {
+      if (
+        state.users.email === action.meta.arg.email &&
+        typeof action.payload === 'object'
+      ) {
         console.log('combaciano');
         localStorage.setItem('TOKEN_DATA', JSON.stringify(action.payload.data));
+        console.log(state.users.firstName);
+        state.firstName = state.users.firstName;
+        state.lastName = state.users.lastName;
         state.auth = true;
         state.email = action.meta.arg.email;
         state.password = action.meta.arg.password;
         state.error = '';
-      } else if (action.payload.includes('Error')) {
+      } else {
         console.log('Errore, non è possibile effettuare il login');
         state.error = 'Errore, non è possibile effettuare il login';
       }
@@ -95,6 +102,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { logout } = userSlice.actions;
+export const { logout, clearLocalStorage } = userSlice.actions;
 
 export default userSlice.reducer;

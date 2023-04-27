@@ -7,7 +7,6 @@ const Modal = () => {
   return (
     <aside className="modal-container">
       <div className="modal">
-        <h4 className="title">Login</h4>
         {/* =================
                 BUTTONS
         ===================== */}
