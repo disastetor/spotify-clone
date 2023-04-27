@@ -2,6 +2,8 @@ import { closeModal } from '../features/modal/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { loginUser, fetchUsers } from '../features/user/userSlice';
+import { fetchAlbum } from '../features/album/albumSlice';
+import { fetchArtists } from '../features/artists/artistsSlice';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,6 +15,8 @@ const Login = () => {
 
   useEffect(() => {
     dispatch(fetchUsers());
+    dispatch(fetchAlbum());
+    dispatch(fetchArtists());
   }, [dispatch]);
 
   const handleSubmit = async (e) => {
