@@ -1,6 +1,5 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
 import Modal from './components/Modal';
 import ArtistsList from './pages/Artists/ArtistsList';
 import ArtistPage from './pages/Artists/ArtistPage';
@@ -15,6 +14,7 @@ import Player from './components/Player';
 
 //Styles
 import './App.css';
+import fetchSongsData from './test';
 
 function App() {
   const { isOpen } = useSelector((store) => store.modal);

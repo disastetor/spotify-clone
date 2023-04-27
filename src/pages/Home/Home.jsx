@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 //Styles
 import './Home.css';
+import { loginUser } from '../../features/user/userSlice';
 
 const Home = () => {
   const dispatch = useDispatch();

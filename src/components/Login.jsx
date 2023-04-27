@@ -1,38 +1,36 @@
 import { closeModal } from '../features/modal/modalSlice';
-import { useDispatch } from 'react-redux';
-import { useState, useRef, useEffect } from 'react';
-import { loginUser } from '../features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { login, loginUser, fetchUsers } from '../features/user/userSlice';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isError, setIsError] = useState(false);
   const [success, setSuccess] = useState(false);
-  const error = 'Error';
 
-  const userRef = useRef();
-  const errRef = useRef();
+  const { firstName, lastName, auth, loadingLogin, found, error } = useSelector(
+    (state) => state.user
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setIsError(false);
-    // setError('');
-  }, [email, password]);
+    dispatch(fetchUsers());
+  }, []);
 
   const handleSubmit = async (e) => {
     if (email === 'easteregg@gmail.com' && password === '12345') {
       e.preventDefault();
+      setEmail('');
+      setPassword('');
       window.open(
         'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
         '_blank'
       );
     } else {
       e.preventDefault();
-      dispatch(() => loginUser({ email, password }));
-      setSuccess(true);
-      setEmail('');
-      setPassword('');
+      dispatch(loginUser({ email, password }));
     }
   };
   return (
@@ -40,6 +38,7 @@ const Login = () => {
       {success ? (
         <section>
           <h1>Sei loggato!</h1>
+          <br />
           <button
             className="btn clear-btn"
             onClick={() => {

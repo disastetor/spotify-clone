@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
 import axios from 'axios';
+
 const url = '/songs';
 const initialState = {
   loading: false,
@@ -18,7 +18,7 @@ const initialState = {
   index: 0,
 };
 
-export const fetchSong = createAsyncThunk('user/getUses', async () => {
+export const fetchSong = createAsyncThunk('song/getSongs', async () => {
   return await axios.get(url).then((res) => res.data);
 });
 
