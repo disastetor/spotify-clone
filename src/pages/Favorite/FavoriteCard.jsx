@@ -1,5 +1,5 @@
 const FavoriteCard = ({ favorite }) => {
-  const { id, name, authorId, albumId, cover, authorName } = favorite;
+  const { id, name, cover } = favorite;
 
   return (
     <>

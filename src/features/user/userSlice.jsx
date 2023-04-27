@@ -53,16 +53,13 @@ const userSlice = createSlice({
     });
     //Case when data are successfully fetched
     builder.addCase(loginUser.fulfilled, (state, action) => {
-      console.log(action);
       //Check if the used mail is equal to a user mail
       //Here there is only one object, with an object array there would be a .find method to check the mail
       if (
         state.users.email === action.meta.arg.email &&
         typeof action.payload === 'object'
       ) {
-        console.log('combaciano');
         localStorage.setItem('TOKEN_DATA', JSON.stringify(action.payload.data));
-        console.log(state.users.firstName);
         state.firstName = state.users.firstName;
         state.lastName = state.users.lastName;
         state.auth = true;

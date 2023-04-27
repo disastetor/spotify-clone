@@ -49,8 +49,6 @@ const playerSlice = createSlice({
         ? (state.index += 1)
         : (state.index += 0);
 
-      console.log(payload.songs);
-
       //Check if there is a song next to the current, if not restart from the first song
       if (state.index < payload.songs.length) {
         //find and store the song with the relative index
@@ -59,7 +57,6 @@ const playerSlice = createSlice({
             return song;
           }
         });
-        console.log(nextSong);
         state.currentSongId = nextSong[0].id;
         state.currentSong = nextSong[0].name;
         state.currentSongAlbumId = nextSong[0].albumId;

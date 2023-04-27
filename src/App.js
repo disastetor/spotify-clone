@@ -14,34 +14,43 @@ import Player from './components/Player';
 
 //Styles
 import './App.css';
-import fetchSongsData from './test';
+import NotLogged from './components/NotLogged';
 
 function App() {
   const { isOpen } = useSelector((store) => store.modal);
+  const { auth } = useSelector((state) => state.user);
 
   return (
     <div className="App">
       <BrowserRouter>
         {isOpen && <Modal />}
-        <div className="sidebar">
-          <Sidebar />
-        </div>
-        <div className="main">
-          <div className="main-content">
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/favorite" element={<Favorite />} />
-              <Route path="/album" element={<Album />} />
-              <Route path="/artists" element={<Artists />}>
-                <Route index element={<ArtistsList />} />
-                <Route path=":artistId" element={<ArtistPage />} />
-              </Route>
-            </Routes>
-          </div>
-          <footer className="player">
-            <Player />
-          </footer>
-        </div>
+        {auth ? (
+          <>
+            <div className="sidebar">
+              <Sidebar />
+            </div>
+            <div className="main">
+              <div className="main-content">
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route path="/favorite" element={<Favorite />} />
+                  <Route path="/album" element={<Album />} />
+                  <Route path="/artists" element={<Artists />}>
+                    <Route index element={<ArtistsList />} />
+                    <Route path=":artistId" element={<ArtistPage />} />
+                  </Route>
+                </Routes>
+              </div>
+              <footer className="player">
+                <Player />
+              </footer>
+            </div>
+          </>
+        ) : (
+          <>
+            <NotLogged />
+          </>
+        )}
       </BrowserRouter>
     </div>
   );

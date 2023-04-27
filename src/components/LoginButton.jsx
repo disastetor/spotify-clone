@@ -1,5 +1,5 @@
 import { openModal } from '../features/modal/modalSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 //Style
 import './LoginButton.css';

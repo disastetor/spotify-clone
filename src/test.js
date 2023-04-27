@@ -1,4 +1,4 @@
-import axios from 'axios';
+/* import axios from 'axios';
 const user = 'john.doe@test.com';
 const psw = 'Test123456!!';
 const fetchData = async () => {
@@ -28,4 +28,4 @@ const fetchSongsData = async () => {
   }
 };
 
-export default fetchSongsData;
+export default fetchSongsData; */

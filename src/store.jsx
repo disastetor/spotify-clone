@@ -5,7 +5,6 @@ import playerReducer from './features/player/playerSlice';
 import albumReducer from './features/album/albumSlice';
 import favoriteReducer from './features/favorite/favoriteSlice';
 import artistReducer from './features/artists/artistsSlice';
-import logger from 'redux-logger';
 
 export const store = configureStore({
   reducer: {

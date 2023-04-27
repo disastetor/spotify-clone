@@ -13,13 +13,11 @@ const ArtistPage = () => {
   const artistData = artists.artists.artists.find((artist) => {
     return artist.id === artistId;
   });
-  //   console.log(artistData);
 
   //Find current artist songs
   const artistSongs = songs.songs.songs.filter((song) => {
     return song.authorId === artistId;
   });
-  //   console.log(artistSongs);
 
   //Find current artist albums
   const artistAlbum = albums.albums.albums.filter((album) => {

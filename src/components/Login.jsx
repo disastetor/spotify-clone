@@ -33,7 +33,7 @@ const Login = () => {
     <>
       {auth ? (
         <section>
-          <h1>Sei loggato!</h1>
+          <h1>Bentornato!</h1>
           <h3 style={{ textAlign: 'center' }}>{userMail}</h3>
           <br />
           <button
