@@ -17,3 +17,9 @@ span {
   margin: auto;
   font-size: larger;
 }
+
+@media (max-width: 1000px) {
+  .button-container {
+    width: 40%;
+  }
+}

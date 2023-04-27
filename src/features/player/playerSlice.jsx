@@ -77,7 +77,7 @@ const playerSlice = createSlice({
     //will be reproduced only the first song
     previousSong: (state, { payload }) => {
       state.isPlaying = true;
-      if (state.index >= 0) {
+      if (state.index > 0) {
         state.index -= 1;
       } else state.index = 0;
 

@@ -63,7 +63,6 @@
 
 .title {
   position: relative;
-
   text-transform: uppercase;
 }
 
@@ -87,4 +86,25 @@
   height: 30px;
   font-size: larger;
   border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .input-field {
+    font-size: 0.7em;
+  }
+  .modal {
+    width: 60%;
+  }
+}
+
+@media (max-height: 750px) {
+  .modal {
+    height: 50%;
+  }
+}
+
+@media (max-height: 580px) {
+  .modal {
+    height: 70%;
+  }
 }
