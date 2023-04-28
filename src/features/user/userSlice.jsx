@@ -12,6 +12,7 @@ const initialState = {
   loadingLogin: false,
   found: false,
   error: null,
+  access_token: localStorage.getItem('ACCESS_TOKEN'),
 };
 
 export const fetchUsers = createAsyncThunk('users/getUsers', async () => {
@@ -33,7 +34,7 @@ export const loginUser = createAsyncThunk('loginUser', async (data) => {
       }
     );
   } catch (error) {
-    return 'Error';
+    return error;
   }
 });
 
@@ -43,7 +44,8 @@ const userSlice = createSlice({
   reducers: {
     logout: () => initialState,
     clearLocalStorage: () => {
-      localStorage.clear();
+      localStorage.removeItem('TOKEN_DATA');
+      localStorage.removeItem('ACCESS_TOKEN');
     },
   },
   extraReducers: (builder) => {
@@ -53,13 +55,13 @@ const userSlice = createSlice({
     });
     //Case when data are successfully fetched
     builder.addCase(loginUser.fulfilled, (state, action) => {
-      //Check if the used mail is equal to a user mail
-      //Here there is only one object, with an object array there would be a .find method to check the mail
-      if (
-        state.users.email === action.meta.arg.email &&
-        typeof action.payload === 'object'
-      ) {
+      //Check if there is an access token and store it
+      if (action.payload?.data?.access_token) {
         localStorage.setItem('TOKEN_DATA', JSON.stringify(action.payload.data));
+        localStorage.setItem('ACCESS_TOKEN', action.payload.data.access_token);
+      }
+
+      if (localStorage.getItem('ACCESS_TOKEN')) {
         state.firstName = state.users.firstName;
         state.lastName = state.users.lastName;
         state.auth = true;
@@ -67,8 +69,9 @@ const userSlice = createSlice({
         state.password = action.meta.arg.password;
         state.error = '';
       } else {
-        console.log('Errore, non è possibile effettuare il login');
-        state.error = 'Errore, non è possibile effettuare il login';
+        console.log(action.payload);
+        state.error =
+          'Errore: non è possibile effettuare il login, controlla le credenziali';
       }
       state.loadingLogin = false;
     });

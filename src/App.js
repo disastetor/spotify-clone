@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Modal from './components/Modal';
 import ArtistsList from './pages/Artists/ArtistsList';
