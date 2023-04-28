@@ -6,6 +6,8 @@ const initialState = {
   loading: false,
   songs: [],
   error: '',
+  duration: 0,
+  songDuration: 180,
   isPlaying: false,
   shuffleActive: false,
   repeatActive: false,
@@ -29,6 +31,7 @@ const playerSlice = createSlice({
     play: (state, { payload }) => {
       const { name, index, id, authorId, albumId, authorName, cover } = payload;
       state.isPlaying = true;
+      state.duration = 0;
       state.currentSong = name;
       state.index = index;
       state.currentSongId = id;
@@ -38,6 +41,7 @@ const playerSlice = createSlice({
       state.cover = cover;
     },
     nextSong: (state, { payload }) => {
+      state.duration = 0;
       if (state.currentSong !== '') {
         state.isPlaying = true;
         //Increment index value (if shuffle button is active pick a random index)
@@ -80,6 +84,7 @@ const playerSlice = createSlice({
     //Same logic as the nextSong but if the user tries to further back than the first song
     //will be reproduced only the first song
     previousSong: (state, { payload }) => {
+      state.duration = 0;
       if (state.currentSong !== '') {
         state.isPlaying = true;
         if (state.index > 0) {
@@ -110,6 +115,17 @@ const playerSlice = createSlice({
         state.isPlaying = !state.isPlaying;
       }
     },
+    changeDuration: (state, { payload }) => {
+      state.duration = payload;
+    },
+    increaseDuration: (state) => {
+      if (state.isPlaying) {
+        state.duration += 1;
+      }
+    },
+    resetDuration: (state) => {
+      state.duration = 0;
+    },
     reset: () => initialState,
   },
   extraReducers: (builder) => {
@@ -136,6 +152,9 @@ export const {
   shuffle,
   repeat,
   handleplay,
+  changeDuration,
+  increaseDuration,
+  resetDuration,
   reset,
 } = playerSlice.actions;
 

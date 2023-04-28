@@ -34,6 +34,8 @@ const Player = () => {
     cover,
     repeatActive,
     isPlaying,
+    duration,
+    songDuration,
   } = useSelector((state) => state.player);
 
   /* Favorite values */
@@ -53,6 +55,10 @@ const Player = () => {
     dispatch(setFavorite(found));
   };
 
+  if (songDuration === duration) {
+    dispatch(nextSong(songs));
+  }
+
   return (
     <>
       <div className="player-container">
@@ -62,7 +68,15 @@ const Player = () => {
           </div>
           <div className="slider">
             {/* #TODO PROGRESS BAR */}
-            <span className="slider-span">00:00</span>
+            <span className="slider-span">
+              {Math.floor(duration / 60).toLocaleString('it-IT', {
+                minimumIntegerDigits: 2,
+              })}
+              :
+              {Math.floor(duration % 60).toLocaleString('it-IT', {
+                minimumIntegerDigits: 2,
+              })}
+            </span>
             <Slider />
             <span className="slider-span">03:00</span>
           </div>

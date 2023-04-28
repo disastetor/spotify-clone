@@ -1,12 +1,11 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-
-function valuetext(value) {
-  return `${value}°C`;
-}
+import { useDispatch, useSelector } from 'react-redux';
+import { changeDuration } from '../features/player/playerSlice';
 
 export default function ColorSlider() {
+  let { duration } = useSelector((state) => state.player);
+  const dispatch = useDispatch();
   return (
     <Box sx={{ width: 700 }}>
       <Slider
@@ -15,8 +14,9 @@ export default function ColorSlider() {
         defaultValue={0}
         min={0}
         max={180}
-        getAriaValueText={valuetext}
+        value={duration}
         color="secondary"
+        onChange={(e, val) => dispatch(changeDuration(val))}
       />
     </Box>
   );
