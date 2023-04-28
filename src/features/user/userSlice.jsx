@@ -1,6 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const token = localStorage.getItem('ACCESS_TOKEN')
+  ? localStorage.getItem('ACCESS_TOKEN')
+  : null;
+
 const initialState = {
   users: [],
   id: '',
@@ -12,7 +16,7 @@ const initialState = {
   loadingLogin: false,
   found: false,
   error: null,
-  access_token: null,
+  access_token: token,
 };
 
 export const fetchUsers = createAsyncThunk('users/getUsers', async () => {
@@ -46,7 +50,15 @@ const userSlice = createSlice({
       localStorage.removeItem('TOKEN_DATA');
       localStorage.removeItem('ACCESS_TOKEN');
     },
-    logout: () => initialState,
+    logout: (state) => {
+      state.users = [];
+      state.id = '';
+      state.firstName = '';
+      state.lastName = '';
+      state.email = '';
+      state.auth = null;
+      state.access_token = '';
+    },
   },
   extraReducers: (builder) => {
     //Case when data is pending
