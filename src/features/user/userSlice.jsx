@@ -12,7 +12,7 @@ const initialState = {
   loadingLogin: false,
   found: false,
   error: null,
-  access_token: localStorage.getItem('ACCESS_TOKEN'),
+  access_token: null,
 };
 
 export const fetchUsers = createAsyncThunk('users/getUsers', async () => {
@@ -42,11 +42,11 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    logout: () => initialState,
     clearLocalStorage: () => {
       localStorage.removeItem('TOKEN_DATA');
       localStorage.removeItem('ACCESS_TOKEN');
     },
+    logout: () => initialState,
   },
   extraReducers: (builder) => {
     //Case when data is pending
@@ -62,6 +62,7 @@ const userSlice = createSlice({
       }
 
       if (localStorage.getItem('ACCESS_TOKEN')) {
+        state.access_token = localStorage.getItem('ACCESS_TOKEN');
         state.firstName = state.users.firstName;
         state.lastName = state.users.lastName;
         state.auth = true;

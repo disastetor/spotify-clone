@@ -1,7 +1,13 @@
+import { Navigate } from 'react-router-dom';
 import LoginButton from './LoginButton';
+import { useSelector } from 'react-redux';
 
 const NotLogged = () => {
-  return (
+  const { access_token } = useSelector((state) => state.user);
+  console.log(access_token);
+  return access_token ? (
+    <Navigate to="/" />
+  ) : (
     <>
       <div
         style={{
@@ -11,7 +17,7 @@ const NotLogged = () => {
           flexDirection: 'column',
         }}
       >
-        <h1>Non sei loggato</h1>
+        <h1>Effettua il login</h1>
         <br />
         <LoginButton />
       </div>

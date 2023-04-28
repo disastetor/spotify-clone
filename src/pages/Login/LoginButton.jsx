@@ -1,4 +1,4 @@
-import { openModal } from '../features/modal/modalSlice';
+import { openModal } from '../../features/modal/modalSlice';
 import { useDispatch } from 'react-redux';
 
 //Style

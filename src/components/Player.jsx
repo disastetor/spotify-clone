@@ -42,10 +42,6 @@ const Player = () => {
   const { auth } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  if (!auth) {
-    dispatch(reset());
-  }
-
   //Check if the current playing song is contained in the favorite list
   //tbh idkh but it works now (5 hrs ago didn't with the same code)
   const isFavorite = favoriteSongs.find((song) => {
@@ -53,17 +49,6 @@ const Player = () => {
       return true;
     } else return false;
   });
-  /*   useEffect(() => {
-    if (favoriteSongs.length > 0) {
-      setIsFavorite(
-        favoriteSongs.find((song) => {
-          if (song.id === currentSongId) {
-            return true;
-          } else return false;
-        })
-      );
-    }
-  }, [favoriteSongs, currentSong, currentSongId]); */
 
   const handleLike = () => {
     const found = songs.songs.find((song) => song.id === currentSongId);

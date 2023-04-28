@@ -2,6 +2,9 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../features/modal/modalSlice';
 import { logout, clearLocalStorage } from '../features/user/userSlice';
+import { reset as resetSongs } from '../features/player/playerSlice';
+import { reset as resetAlbum } from '../features/album/albumSlice';
+import { reset as resetArtist } from '../features/artists/artistsSlice';
 
 //Style
 import './Sidebar.css';
@@ -104,8 +107,11 @@ const Sidebar = () => {
         <div
           className="logout-div"
           onClick={() => {
-            dispatch(logout());
             dispatch(clearLocalStorage());
+            dispatch(logout());
+            dispatch(resetAlbum());
+            dispatch(resetArtist());
+            dispatch(resetSongs());
           }}
         >
           <div className="logout-minidiv">

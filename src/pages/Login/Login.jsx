@@ -1,9 +1,9 @@
-import { closeModal } from '../features/modal/modalSlice';
+import { closeModal } from '../../features/modal/modalSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { loginUser, fetchUsers } from '../features/user/userSlice';
-import { fetchAlbum } from '../features/album/albumSlice';
-import { fetchArtists } from '../features/artists/artistsSlice';
+import { loginUser, fetchUsers } from '../../features/user/userSlice';
+import { fetchAlbum } from '../../features/album/albumSlice';
+import { fetchArtists } from '../../features/artists/artistsSlice';
 
 const Login = () => {
   const [email, setEmail] = useState('');
