@@ -16,9 +16,9 @@ const PrivateRoutes = () => {
     dispatch(fetchArtists());
   }, [dispatch]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     axios.get('/user-info').then((res) => console.log(res));
-  }, [access_token]);
+  }, [access_token]); */
 
   return access_token ? <Outlet /> : <Navigate to={'/login'} />;
 };

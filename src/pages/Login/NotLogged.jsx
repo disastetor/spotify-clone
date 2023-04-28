@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const NotLogged = () => {
   const { access_token } = useSelector((state) => state.user);
-  console.log(access_token);
+
   return access_token ? (
     <Navigate to="/" />
   ) : (

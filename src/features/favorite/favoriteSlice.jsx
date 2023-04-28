@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   favoriteSongs: localStorage.getItem('FAVOURITE_SONGS')
-    ? localStorage.getItem('FAVOURITE_SONGS')
+    ? JSON.parse(localStorage.getItem('FAVOURITE_SONGS'))
     : [],
 };
-
+// console.log(JSON.parse(localStorage.getItem('FAVOURITE_SONGS')));
 const favoriteSlice = createSlice({
   name: 'favorite',
   initialState,

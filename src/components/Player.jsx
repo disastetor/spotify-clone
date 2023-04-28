@@ -6,7 +6,6 @@ import {
   shuffle,
   repeat,
   handleplay,
-  reset,
 } from '../features/player/playerSlice';
 import { setFavorite } from '../features/favorite/favoriteSlice';
 
@@ -39,7 +38,6 @@ const Player = () => {
 
   /* Favorite values */
   const { favoriteSongs } = useSelector((state) => state.favorite);
-  const { auth } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   //Check if the current playing song is contained in the favorite list
