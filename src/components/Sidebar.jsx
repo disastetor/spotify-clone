@@ -16,8 +16,7 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const { auth, firstName, lastName } = useSelector((state) => state.user);
-
+  const { access_token, users } = useSelector((state) => state.user);
   return (
     <>
       <div className="sidebar-content">
@@ -30,7 +29,9 @@ const Sidebar = () => {
               <Person2Icon />
             </div>
           </div>
-          <div className="username">{auth && firstName + ' ' + lastName}</div>
+          <div className="username">
+            {access_token && users.firstName + ' ' + users.lastName}
+          </div>
         </div>
 
         {/*======================

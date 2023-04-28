@@ -8,8 +8,6 @@ const token = localStorage.getItem('ACCESS_TOKEN')
 const initialState = {
   users: [],
   id: '',
-  firstName: '',
-  lastName: '',
   email: '',
   auth: false,
   loadingUsers: false,
@@ -20,6 +18,7 @@ const initialState = {
 };
 
 export const fetchUsers = createAsyncThunk('users/getUsers', async () => {
+  console.log('passa qui');
   return await axios.get('/user-info').then((res) => res.data);
 });
 
@@ -53,8 +52,6 @@ const userSlice = createSlice({
     logout: (state) => {
       state.users = [];
       state.id = '';
-      state.firstName = '';
-      state.lastName = '';
       state.email = '';
       state.auth = null;
       state.access_token = '';
@@ -73,13 +70,13 @@ const userSlice = createSlice({
         localStorage.setItem('ACCESS_TOKEN', action.payload.data.access_token);
       }
 
+      console.log(action.meta.arg.email);
       if (localStorage.getItem('ACCESS_TOKEN')) {
         state.access_token = localStorage.getItem('ACCESS_TOKEN');
         state.firstName = state.users.firstName;
         state.lastName = state.users.lastName;
         state.auth = true;
         state.email = action.meta.arg.email;
-        state.password = action.meta.arg.password;
         state.error = '';
       } else {
         console.log(action.payload);
