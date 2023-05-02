@@ -1,8 +1,9 @@
 .songs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5% 2%;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+  flex-direction: row;
   box-sizing: border-box;
   padding: 3% 3%;
 }

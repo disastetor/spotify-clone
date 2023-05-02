@@ -8,7 +8,8 @@ const initialState = {
 };
 
 export const fetchAlbum = createAsyncThunk('album/getAlbums', async () => {
-  return await axios.get('/albums').then((res) => res.data);
+  const { data } = await axios.get('/albums');
+  return data;
 });
 
 const albumSlice = createSlice({
@@ -23,7 +24,8 @@ const albumSlice = createSlice({
     });
     builder.addCase(fetchAlbum.fulfilled, (state, action) => {
       state.loading = false;
-      state.albums = action.payload;
+      console.log(action.payload);
+      state.albums = [...action.payload.albums];
       state.error = '';
     });
     builder.addCase(fetchAlbum.rejected, (state, action) => {

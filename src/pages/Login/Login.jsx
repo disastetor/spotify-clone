@@ -69,7 +69,9 @@ const Login = () => {
               BUTTONS
       ===================== */}
             <div className="btn-container">
-              <input type="submit" className="btn confirm-btn" value="login" />
+              <button type="submit" className="btn confirm-btn">
+                Login
+              </button>
 
               <button
                 className="btn clear-btn"

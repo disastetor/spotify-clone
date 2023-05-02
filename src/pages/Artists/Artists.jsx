@@ -47,11 +47,9 @@ const Artists = () => {
       songs?.songs?.songs?.length &&
       !albums.loading &&
       albums?.albums?.albums?.length ? (
-        <>
-          <div className="song-container">
-            {<Outlet context={{ artists, songs, albums }} />}
-          </div>
-        </>
+        <div className="song-container">
+          {<Outlet context={{ artists, songs, albums }} />}
+        </div>
       ) : null}
     </>
   );

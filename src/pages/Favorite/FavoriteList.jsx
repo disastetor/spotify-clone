@@ -1,4 +1,4 @@
-import FavoriteCard from './FavoriteCard';
+import SongCard from '../../components/SongCard';
 
 const FavoriteList = (props) => {
   const favorite = props.favorite;
@@ -7,7 +7,7 @@ const FavoriteList = (props) => {
       <div className="songs">
         <>
           {favorite.map((favorite) => (
-            <FavoriteCard key={favorite.id} favorite={favorite} />
+            <SongCard key={favorite.id} song={favorite} />
           ))}
         </>
       </div>

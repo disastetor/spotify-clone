@@ -1,14 +1,19 @@
 import Player from './Player';
 import Sidebar from './Sidebar';
 
-const GeneralLayout = () => {
+const GeneralLayout = ({ children }) => {
   return (
-    <div className="main">
-      <div className="main-content">
+    <>
+      <div className="sidebar">
         <Sidebar />
-        <Player />
       </div>
-    </div>
+      <div className="main">
+        <div className="main-content">{children}</div>
+        <footer className="player">
+          <Player />
+        </footer>
+      </div>
+    </>
   );
 };
 export default GeneralLayout;

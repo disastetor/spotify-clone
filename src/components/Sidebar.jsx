@@ -18,112 +18,110 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const { access_token, users } = useSelector((state) => state.user);
   return (
-    <>
-      <div className="sidebar-content">
-        {/*======================
+    <div className="sidebar-content">
+      {/*======================
                     PROFILE 
              ======================*/}
-        <div className="profile">
-          <div className=" propic" onClick={() => dispatch(openModal())}>
-            <div className="image">
-              <Person2Icon />
-            </div>
-          </div>
-          <div className="username">
-            {access_token && users.firstName + ' ' + users.lastName}
+      <div className="profile">
+        <div className="propic" onClick={() => dispatch(openModal())}>
+          <div className="image">
+            <Person2Icon />
           </div>
         </div>
+        <div className="username">
+          {access_token && users.firstName + ' ' + users.lastName}
+        </div>
+      </div>
 
-        {/*======================
+      {/*======================
                 PAGE LINKS 
              ======================*/}
-        <div className={'pages'}>
-          {/*======================
+      <div className={'pages'}>
+        {/*======================
                     HOME 
              ======================*/}
-          <NavLink
-            className="page"
-            to="/"
-            style={({ isActive }) => ({
-              color: isActive ? 'plum' : 'aliceblue',
-            })}
-          >
-            <div className="text">Home</div>
-            <div className="icon">
-              <HomeRoundedIcon fontSize="large" />
-            </div>
-          </NavLink>
+        <NavLink
+          className="page"
+          to="/"
+          style={({ isActive }) => ({
+            color: isActive ? 'plum' : 'aliceblue',
+          })}
+        >
+          <div className="text">Home</div>
+          <div className="icon">
+            <HomeRoundedIcon fontSize="large" />
+          </div>
+        </NavLink>
 
-          {/*======================
+        {/*======================
                     FAVORITE 
              ======================*/}
-          <NavLink
-            className="page"
-            to="/favorite"
-            style={({ isActive }) => ({
-              color: isActive ? 'plum' : 'aliceblue',
-            })}
-          >
-            <div className="text">Preferiti</div>
-            <div className="icon">
-              <FilledHeart />
-            </div>
-          </NavLink>
+        <NavLink
+          className="page"
+          to="/favorite"
+          style={({ isActive }) => ({
+            color: isActive ? 'plum' : 'aliceblue',
+          })}
+        >
+          <div className="text">Preferiti</div>
+          <div className="icon">
+            <FilledHeart />
+          </div>
+        </NavLink>
 
-          {/*======================
+        {/*======================
                     ALBUM 
              ======================*/}
-          <NavLink
-            className="page"
-            to="album"
-            style={({ isActive }) => ({
-              color: isActive ? 'plum' : 'aliceblue',
-            })}
-          >
-            <div className="text">Album</div>
-            <div className="icon">
-              <AlbumIcon fontSize="large" />
-            </div>
-          </NavLink>
+        <NavLink
+          className="page"
+          to="album"
+          style={({ isActive }) => ({
+            color: isActive ? 'plum' : 'aliceblue',
+          })}
+        >
+          <div className="text">Album</div>
+          <div className="icon">
+            <AlbumIcon fontSize="large" />
+          </div>
+        </NavLink>
 
-          {/*======================
+        {/*======================
                     ARTISTS 
              ======================*/}
-          <NavLink
-            className="page"
-            to="artists"
-            style={({ isActive }) => ({
-              color: isActive ? 'plum' : 'aliceblue',
-            })}
-          >
-            <div className="text">Artisti</div>
-            <div className="icon">
-              <Person2Icon fontSize="large" />
-            </div>
-          </NavLink>
-        </div>
-
-        {/* LOGOUT */}
-
-        <div
-          className="logout-div"
-          onClick={() => {
-            dispatch(clearLocalStorage());
-            dispatch(logout());
-            dispatch(resetAlbum());
-            dispatch(resetArtist());
-            dispatch(resetSongs());
-          }}
+        <NavLink
+          className="page"
+          to="artists"
+          style={({ isActive }) => ({
+            color: isActive ? 'plum' : 'aliceblue',
+          })}
         >
-          <div className="logout-minidiv">
-            <div className="logout">Logout</div>
-            <div className="logout-icon">
-              <LogoutRoundedIcon />
-            </div>
+          <div className="text">Artisti</div>
+          <div className="icon">
+            <Person2Icon fontSize="large" />
+          </div>
+        </NavLink>
+      </div>
+
+      {/* LOGOUT */}
+
+      <div
+        className="logout-div"
+        onClick={() => {
+          dispatch(clearLocalStorage());
+          dispatch(logout());
+          dispatch(resetAlbum());
+          dispatch(resetArtist());
+          dispatch(resetSongs());
+        }}
+      >
+        <div className="logout-minidiv">
+          <div className="logout">Logout</div>
+          <div className="logout-icon">
+            <LogoutRoundedIcon />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Sidebar;

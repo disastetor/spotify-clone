@@ -8,6 +8,7 @@ import { fetchUsers } from '../features/user/userSlice';
 const PrivateRoutes = () => {
   const { access_token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+
   /* Fetch all needed data */
   useEffect(() => {
     dispatch(fetchUsers());

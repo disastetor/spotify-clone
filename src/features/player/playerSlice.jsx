@@ -59,17 +59,17 @@ const playerSlice = createSlice({
         //Check if there is a song next to the current, if not restart from the first song
         if (state.index < payload.songs.length) {
           //find and store the song with the relative index
-          const nextSong = payload.songs.filter((song, index) => {
-            if (index === state.index) {
-              return song;
-            }
-          });
-          state.currentSongId = nextSong[0].id;
-          state.currentSong = nextSong[0].name;
-          state.currentSongAlbumId = nextSong[0].albumId;
-          state.currentSongAuthorId = nextSong[0].authorId;
-          state.currentSongAuthorName = nextSong[0].authorName;
-          state.cover = nextSong[0].cover;
+          const nextSong = payload.songs.find(
+            (song, index) => index === state.index
+          );
+          if (nextSong) {
+            state.currentSongId = nextSong.id;
+            state.currentSong = nextSong.name;
+            state.currentSongAlbumId = nextSong.albumId;
+            state.currentSongAuthorId = nextSong.authorId;
+            state.currentSongAuthorName = nextSong.authorName;
+            state.cover = nextSong.cover;
+          }
         } else {
           state.index = 0;
           state.currentSongId = payload.songs[0].id;
@@ -91,17 +91,17 @@ const playerSlice = createSlice({
           state.index -= 1;
         } else state.index = 0;
 
-        const prevSong = payload.songs.filter((song, index) => {
-          if (index === state.index) {
-            return song.name;
-          }
-        });
-        state.currentSongId = prevSong[0].id;
-        state.currentSong = prevSong[0].name;
-        state.currentSongAlbumId = prevSong[0].albumId;
-        state.currentSongAuthorId = prevSong[0].authorId;
-        state.currentSongAuthorName = prevSong[0].authorName;
-        state.cover = prevSong[0].cover;
+        const prevSong = payload.songs.find(
+          (song, index) => index === state.index
+        );
+        if (prevSong) {
+          state.currentSongId = prevSong.id;
+          state.currentSong = prevSong.name;
+          state.currentSongAlbumId = prevSong.albumId;
+          state.currentSongAuthorId = prevSong.authorId;
+          state.currentSongAuthorName = prevSong.authorName;
+          state.cover = prevSong.cover;
+        }
       }
     },
     shuffle: (state) => {
@@ -110,7 +110,7 @@ const playerSlice = createSlice({
     repeat: (state) => {
       state.repeatActive = !state.repeatActive;
     },
-    handleplay: (state) => {
+    handlePlay: (state) => {
       if (state.currentSong !== '') {
         state.isPlaying = !state.isPlaying;
       }
@@ -120,7 +120,7 @@ const playerSlice = createSlice({
     },
     increaseDuration: (state) => {
       if (state.isPlaying) {
-        state.duration += 1;
+        state.duration++;
       }
     },
     resetDuration: (state) => {
@@ -151,7 +151,7 @@ export const {
   previousSong,
   shuffle,
   repeat,
-  handleplay,
+  handlePlay,
   changeDuration,
   increaseDuration,
   resetDuration,

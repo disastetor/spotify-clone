@@ -23,7 +23,7 @@ const Album = () => {
       {!albums.loading && albums.error ? (
         <div>Error: {albums.error}</div>
       ) : null}
-      {!albums.loading && albums?.albums?.albums?.length ? (
+      {!albums.loading && albums.albums.length > 0 ? (
         <>
           <div className="song-container">
             <h1 className="title home-title">Albums</h1>

@@ -4,19 +4,13 @@ import AlbumCard from './AlbumCard';
 //Style
 import '../../components/SongList.css';
 
-const AlbumList = (props) => {
-  const { albums } = props.albums;
-
+const AlbumList = ({ albums }) => {
   return (
-    <>
-      <div className="songs">
-        <>
-          {albums.map((album) => (
-            <AlbumCard key={album.id} album={album} />
-          ))}
-        </>
-      </div>
-    </>
+    <div className="songs">
+      {albums.map((album) => (
+        <AlbumCard key={album.id} album={album} />
+      ))}
+    </div>
   );
 };
 

@@ -12,19 +12,17 @@ export default function VolumeSlider() {
   };
 
   return (
-    <>
-      <Box sx={{ width: 0.7 }}>
-        <Stack spacing={1} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <VolumeDown />
-          <Slider
-            aria-label="Volume"
-            value={value}
-            onChange={handleChange}
-            color="secondary"
-            size="small"
-          />
-        </Stack>
-      </Box>
-    </>
+    <Box sx={{ width: 0.7 }}>
+      <Stack spacing={1} direction="row" sx={{ mb: 1 }} alignItems="center">
+        <VolumeDown />
+        <Slider
+          aria-label="Volume"
+          value={value}
+          onChange={handleChange}
+          color="secondary"
+          size="small"
+        />
+      </Stack>
+    </Box>
   );
 }
